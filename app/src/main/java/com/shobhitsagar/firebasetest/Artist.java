@@ -6,24 +6,24 @@ package com.shobhitsagar.firebasetest;
 
 public class Artist {
 
-    private String artistID;
-    private String artistName;
+    private String ID;
+    private String Name;
 
 //    public Artist () {
 //
 //    }
 
-    public Artist(String artistID, String artistName) {
-        this.artistID = artistID;
-        this.artistName = artistName;
+    public Artist(String ID, String Name) {
+        this.ID = ID;
+        this.Name = Name;
     }
 
     public String getArtistID() {
-        return artistID;
+        return ID;
     }
 
     public String getArtistName() {
-        return artistName;
+        return Name;
     }
 
 }

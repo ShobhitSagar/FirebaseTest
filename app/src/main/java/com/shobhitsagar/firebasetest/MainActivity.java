@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     Button button1;
     EditText editText1;
 
+
+    private int i=1;
+
     DatabaseReference databaseReference;
 
     @Override
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("artists");
+        databaseReference = FirebaseDatabase.getInstance().getReference("USERS");
 
         editText1 = (EditText) findViewById(R.id.editText);
         button1 = (Button) findViewById(R.id.button);
@@ -44,15 +47,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addArtist() {
-        String name = editText1.getText().toString().trim();
+        String name = editText1.getText().toString();
+        String idd="Attempt : "+i;
 
         if (!TextUtils.isEmpty(name)) {
 
             String id = databaseReference.push().getKey();
 
             Artist artist = new Artist(id, name);
+            i++;
 
-            databaseReference.child(id).setValue(artist);
+            databaseReference.child(idd).setValue(artist);
             Toast.makeText(this, "Artist Added!", Toast.LENGTH_SHORT).show();
 
         }
