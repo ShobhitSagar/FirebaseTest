@@ -126,4 +126,27 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "You should enter a name", Toast.LENGTH_SHORT).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if (!isUserClickedBackButton) {
+            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+            isUserClickedBackButton = true;
+        } else {
+            super.onBackPressed();
+        }
+
+        new CountDownTimer(3000, 1000) {
+
+            @Override
+            public void onTick(long l) {
+
+            }
+
+            @Override
+            public void onFinish() {
+            isUserClickedBackButton = false;
+            }
+        }.start();
+    }
 }
