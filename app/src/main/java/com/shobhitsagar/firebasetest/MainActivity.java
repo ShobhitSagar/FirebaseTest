@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     Button deleteButton;
     EditText editText1;
     private ListView listView;
+    
+    private boolean isUserClickedBackButton = false;
 
     private ArrayList<String> listArray= new ArrayList<>();
 
