@@ -1,4 +1,4 @@
-# FirebaseTest
+# Firebase-Realtime-Database
 
 Set up Firebase Realtime Database for Android
 
