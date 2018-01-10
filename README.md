@@ -1,6 +1,6 @@
 # FirebaseTest
 
-Realtime Database using Firebase.
+Set up Firebase Realtime Database for Android
 
 
 ---
